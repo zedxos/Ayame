@@ -41,3 +41,7 @@ Also I will not be taking a time to show how to set this up for now!
 
 # Contribute
 > just pull request
+
+### Tip (contributers)
+* edit(number tag) = Edited some codes from here
+* update(number tag) = Initial commit update form any coding idea
