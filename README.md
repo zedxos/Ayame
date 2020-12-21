@@ -29,6 +29,9 @@ function ExampleCommand(/*The things youve define MAKE SURE IT HAS THE RIGHT PLA
 module.exports = ExampleCommand; //<- It gotta be the same as function or else it will throw that 'Is not a function or constructor Errors!'.
 ```
 
+# ....
+* If you're wondering why i just use functions not a real cmd handler because this is more fun for me.
+
 # Tutorial
 * Maybe in the Future i will do FULL Tutorial how to set this up since its only on Early Stage i will fix some things up!
 
