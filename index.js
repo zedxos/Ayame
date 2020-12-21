@@ -11,6 +11,6 @@ http.createServer(function (req, res) {
 
 var AyameCore = require('./Ayame-Core/core-start.js'),
     AyameScript = require('./Ayame-Main-Modules/Ayame-Script.js'),
-    AyameToken = 'NzQ1MTQwNDA4Njk0MDc5NTU5.XztcFQ.EUgqrzGv6t5q8zma-7kfBW-Vf-E';
+    AyameToken = 'NzQ1MTQwNDA4Njk0MDc5NTU5.XztcFQ.hD46kMTuYZ9Vx4wJ8WKKQzdchB0';
     
 AyameCore(AyameScript, AyameToken /**@param {string} functions*/);
