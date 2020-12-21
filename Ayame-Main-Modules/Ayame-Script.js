@@ -67,7 +67,8 @@ function AyameScript(AyameToken) {
         EnchantCommand = require('./src/Commands/Fun/Enchant.js'),
         YomamaCommand = require('./src/Commands/Fun/Yomama.js'),
         ChucknorrisCommand = require('./src/Commands/Fun/Chucknorris.js'),
-        ZalgoCommand = require('./src/Commands/Fun/Zalgo.js');
+        ZalgoCommand = require('./src/Commands/Fun/Zalgo.js'),
+        InsultCommand = require('./src/Commands/Fun/Insult.js');
   
   /*Functions for Cmds - */
   const EmbedTemplate = require('./src/Functions/EmbedTemplate.js'),
@@ -105,7 +106,8 @@ function AyameScript(AyameToken) {
         BanFunction = require('./src/Functions/Ban.js'),
         KickFunction = require('./src/Functions/Kick.js'),
         AvatarFunction = require('./src/Functions/Avatar.js'),
-        MemberCountFunction = require('./src/Functions/MemberCount.js');
+        MemberCountFunction = require('./src/Functions/MemberCount.js'),
+        InsultFunction = require('./src/Functions/Insult.js');
 
   /*Emojis - */
   const { notice } = require('./Emojis.js');
@@ -280,6 +282,9 @@ function AyameScript(AyameToken) {
       AyameMessage(msg);
     } else if(command === 'zalgo') {
       ZalgoCommand(msg, args, notice, Discord, AyameClient, Db, EmbedTemplate);
+      AyameMessage(msg);
+    } else if(command === 'insult') {
+      InsultCommand(msg, args, notice, Discord, AyameClient, Db, EmbedTemplate, InsultFunction);
       AyameMessage(msg);
     }
   })

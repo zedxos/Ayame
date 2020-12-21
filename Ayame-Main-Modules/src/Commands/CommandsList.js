@@ -243,5 +243,10 @@ function CommandsList(Db) {
  Db.set(`zalgodescription`, `Turn your text to Zalgo Characters!`)
  Db.set(`zalgousage`, `<Type something less than 180 Characters!>`)
  console.log('Registered Zalgo Command!')
+  
+ Db.set(`insultname`, `Insult`)
+ Db.set(`insultdescription`, `Insult Someone or just yourself!`)
+ Db.set(`insultusage`, `(Mention a user!)`)
+ console.log('Registered Insult Command!')
 }
 module.exports = CommandsList;

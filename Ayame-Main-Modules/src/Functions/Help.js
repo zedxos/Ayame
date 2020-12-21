@@ -7,7 +7,7 @@ function HelpFunction(msg, args, notice, moment, Prefix, Discord, AyameClient, D
    helpEmbed.setDescription(`Do ${Prefix}help (command name) for more info on specific command!`)
    helpEmbed.setImage('https://serving.photos.photobox.com/085707889448717b88c84fc6704aa63d2b2ea94a8cf08238a1bbc6d902b5c512a187c9a3.jpg')
    helpEmbed.addField(`**Anime**`, `${notice}\`AnimeMeme, AnimeScrap, Baguette, Baka.\``)
-   helpEmbed.addField(`**Fun**`, `${notice}\`Reddit, Compliment, Enchant, Yomama, Chucknorris, Zalgo.\``)
+   helpEmbed.addField(`**Fun**`, `${notice}\`Reddit, Compliment, Enchant, Yomama, Chucknorris, Zalgo, Insult.\``)
    helpEmbed.addField(`**Roleplay**`, `${notice}\`Cuddle, Hug, Tickle, Marry, Divorce.\``)
    helpEmbed.addField(`**Info**`, `${notice}\`Avatar, BotInfo, Channels, ChannelInfo, Emojis, Help, Invite, ServerInfo, Uptime, MemberCount, Weather, UserInfo.\``)
    helpEmbed.addField(`**Roles**`, `${notice}\`RoleInfo, Roles.\``)
@@ -19,7 +19,7 @@ function HelpFunction(msg, args, notice, moment, Prefix, Discord, AyameClient, D
    } else {
      helpEmbed.addField(`**Nsfw**`, `${notice}\`Anal, Classic, NsfwAvatar, Tits.\``)
    }
-   helpEmbed.addField(`**Links**`, `${notice}[Invite Link](https://discord.com/api/oauth2/authorize?client_id=745140408694079559&permissions=2134900151&scope=bot)`)
+   helpEmbed.addField(`**Links**`, `${notice}[Invite Link](https://discord.com/api/oauth2/authorize?client_id=745140408694079559&permissions=2134900151&scope=bot), [Github](https://github.com/zedxos/Ayame).`)
    return msg.channel.send(helpEmbed)
  } else {
    let cmd = args[0].toLowerCase()
