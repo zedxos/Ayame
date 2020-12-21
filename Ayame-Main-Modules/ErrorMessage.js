@@ -8,4 +8,4 @@ function ErrorMessage(notice, error, msg, name, EmbedTemplate, AyameClient) {
   msg.channel.send(errorEmbed)
 }
 module.exports = ErrorMessage;
-FAILED*/
+FAILED - (undefined Time) but ill be fixing this and make error handlers for sll cmds :dab:*/
