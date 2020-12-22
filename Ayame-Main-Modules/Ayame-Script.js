@@ -328,9 +328,9 @@ function AyameScript(AyameToken) {
 /*9*/else if (messagefetch == 700) messages = 700;
 /*10*/else if (messagefetch == 800) messages = 300;
 /*11*/else if (messagefetch == 900) messages = 900;
-/*12*/if (messagefetch == 1000) messages = 1000;
-/*13*/ else if (messagefetch == 1100) messages = 1100; 
-/*14*/ else if (messagefetch == 1200) messages = 1200; 
+/*12*/else if (messagefetch == 1000) messages = 1000;
+/*13*/else if (messagefetch == 1100) messages = 1100; 
+/*14*/else if (messagefetch == 1200) messages = 1200; 
 /*15*/else if (messagefetch == 1300) messages = 1300;
 /*16*/else if (messagefetch == 1400) messages = 1400;
 /*17*/else if (messagefetch == 1500) messages = 1500;
