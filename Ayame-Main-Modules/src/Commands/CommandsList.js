@@ -253,5 +253,10 @@ function CommandsList(Db) {
  Db.set(`animeavatardescription`, `Get some SFW Anime Avatars! if you use this in nsfw channel it will return NSFW Too!`)
  Db.set(`animeavatarusage`, `None!`)
  console.log('Registered AnimeAvatar Command!')
+  
+ Db.set(`thanosquotename`, `ThanosQuote`)
+ Db.set(`thanosquotedescription`, `Get a random Thanos Quote!`)
+ Db.set(`thanosquoteusage`, `None!`)
+ console.log('Registered ThanosQuote Command!')
 }
 module.exports = CommandsList;
