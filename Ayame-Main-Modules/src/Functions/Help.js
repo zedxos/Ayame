@@ -6,7 +6,7 @@ function HelpFunction(msg, args, notice, moment, Prefix, Discord, AyameClient, D
  if(!args[0]) {
    helpEmbed.setDescription(`Do ${Prefix}help (command name) for more info on specific command!`)
    helpEmbed.setImage('https://serving.photos.photobox.com/085707889448717b88c84fc6704aa63d2b2ea94a8cf08238a1bbc6d902b5c512a187c9a3.jpg')
-   helpEmbed.addField(`**Anime**`, `${notice}\`AnimeMeme, AnimeScrap, Baguette, Baka.\``)
+   helpEmbed.addField(`**Anime**`, `${notice}\`AnimeMeme, AnimeAvatar, AnimeScrap, Baguette, Baka.\``)
    helpEmbed.addField(`**Fun**`, `${notice}\`Reddit, Compliment, Enchant, Yomama, Chucknorris, Zalgo, Insult.\``)
    helpEmbed.addField(`**Roleplay**`, `${notice}\`Cuddle, Hug, Tickle, Marry, Divorce.\``)
    helpEmbed.addField(`**Info**`, `${notice}\`Avatar, BotInfo, Channels, ChannelInfo, Emojis, Help, Invite, ServerInfo, Uptime, MemberCount, Weather, UserInfo.\``)

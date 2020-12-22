@@ -248,5 +248,10 @@ function CommandsList(Db) {
  Db.set(`insultdescription`, `Insult Someone or just yourself!`)
  Db.set(`insultusage`, `(Mention a user!)`)
  console.log('Registered Insult Command!')
+  
+ Db.set(`animeavatarname`, `AnimeAvatar`)
+ Db.set(`animeavatardescription`, `Get some SFW Anime Avatars! if you use this in nsfw channel it will return NSFW Too!`)
+ Db.set(`animeavatarusage`, `None!`)
+ console.log('Registered AnimeAvatar Command!')
 }
 module.exports = CommandsList;
