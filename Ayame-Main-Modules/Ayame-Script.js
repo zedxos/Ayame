@@ -70,7 +70,10 @@ function AyameScript(AyameToken) {
         ZalgoCommand = require('./src/Commands/Fun/Zalgo.js'),
         InsultCommand = require('./src/Commands/Fun/Insult.js'),
         AnimeAvatarCommand = require('./src/Commands/Anime/AnimeAvatar.js'),
-        ThanosQuoteCommand = require('./src/Commands/Fun/ThanosQuote.js');
+        ThanosQuoteCommand = require('./src/Commands/Fun/ThanosQuote.js'),
+        DisableLevelingCommand = require('./src/Commands/Leveling/DisableLeveling.js'),
+        EnableLevelingCommand = require('./src/Commands/Leveling/EnableLeveling.js'),
+        SetLevelMessageCommand = require('./src/Commands/Leveling/SetLevelMessage.js');
   
   /*Functions for Cmds - */
   const EmbedTemplate = require('./src/Functions/EmbedTemplate.js'),
@@ -294,7 +297,63 @@ function AyameScript(AyameToken) {
     } else if(command === 'thanosquote') {
       ThanosQuoteCommand(msg, args, notice, Discord, AyameClient, Db, EmbedTemplate);
       AyameMessage(msg);
+    } else if(command === 'disableleveling') {
+      DisableLevelingCommand(msg, args, notice, Permissions, Discord, AyameClient, Db, EmbedTemplate);
+      AyameMessage(msg);
+    } else if(command === 'enableleveling') {
+      EnableLevelingCommand(msg, args, notice, Permissions, Discord, AyameClient, Db, EmbedTemplate);
+      AyameMessage(msg);
+    } else if(command === 'setlevelmessage') {
+      SetLevelMessageCommand(msg, args, notice, Permissions, Discord, AyameClient, Db, EmbedTemplate);
+      AyameMessage(msg);
     }
+  })
+  
+  AyameClient.on('message', async msg => {
+  let levelingdb = Db.get(`levelingdata_${msg.guild.id}`)
+  if(levelingdb === null) return;
+    
+  Db.add(`messages_${msg.guild.id}_${msg.author.id}`, 1)
+  let messagefetch = Db.get(`messages_${msg.guild.id}_${msg.author.id}`)
+  
+  let messages;
+/*1*/if (messagefetch == 15) messages = 15;
+/*2*/ else if (messagefetch == 65) messages = 65; 
+/*3*/ else if (messagefetch == 115) messages = 115; 
+/*4*/else if (messagefetch == 200) messages = 200;
+/*5*/else if (messagefetch == 300) messages = 300;
+/*6*/else if (messagefetch == 400) messages = 400;
+/*7*/else if (messagefetch == 500) messages = 500;
+/*8*/else if (messagefetch == 600) messages = 600;
+/*9*/else if (messagefetch == 700) messages = 700;
+/*10*/else if (messagefetch == 800) messages = 300;
+/*11*/else if (messagefetch == 900) messages = 900;
+/*12*/if (messagefetch == 1000) messages = 1000;
+/*13*/ else if (messagefetch == 1100) messages = 1100; 
+/*14*/ else if (messagefetch == 1200) messages = 1200; 
+/*15*/else if (messagefetch == 1300) messages = 1300;
+/*16*/else if (messagefetch == 1400) messages = 1400;
+/*17*/else if (messagefetch == 1500) messages = 1500;
+/*18*/else if (messagefetch == 1600) messages = 1600;
+/*19*/else if (messagefetch == 1700) messages = 1700;
+/*20*/else if (messagefetch == 1800) messages = 1800;
+/*21*/else if (messagefetch == 1900) messages = 1900;
+/*22*/else if (messagefetch == 2000) messages = 2000; 
+
+  if (!isNaN(messages)) {
+  Db.add(`level_${msg.guild.id}_${msg.author.id}`, 1)
+  let levelfetch = Db.get(`level_${msg.guild.id}_${msg.author.id}`)
+    
+  let levelingmsgdb = Db.get(`levelmsg_${msg.guild.id}`)
+  if(!levelingmsgdb) {
+    Db.set(`levelmsg_${msg.guild.id}`, `Hey {user} You Leveled Up to {level}!`)
+  }
+    let newLevelMsg = Db.fetch(`levelmsg_${msg.guild.id}`)
+    let contentLVL = newLevelMsg
+        .replace(/{user}/g, `<@${msg.author.id}>`)
+        .replace(/{level}/g, `${levelfetch}`)
+   msg.channel.send(contentLVL)
+  }
   })
   
   AyameClient.on('guildMemberAdd', async member => {
