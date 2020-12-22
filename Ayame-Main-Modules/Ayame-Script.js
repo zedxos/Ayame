@@ -69,7 +69,8 @@ function AyameScript(AyameToken) {
         ChucknorrisCommand = require('./src/Commands/Fun/Chucknorris.js'),
         ZalgoCommand = require('./src/Commands/Fun/Zalgo.js'),
         InsultCommand = require('./src/Commands/Fun/Insult.js'),
-        AnimeAvatarCommand = require('./src/Commands/Anime/AnimeAvatar.js');
+        AnimeAvatarCommand = require('./src/Commands/Anime/AnimeAvatar.js'),
+        ThanosQuoteCommand = require('./src/Commands/Fun/ThanosQuote.js');
   
   /*Functions for Cmds - */
   const EmbedTemplate = require('./src/Functions/EmbedTemplate.js'),
@@ -289,6 +290,9 @@ function AyameScript(AyameToken) {
       AyameMessage(msg);
     } else if(command === 'animeavatar') {
       AnimeAvatarCommand(msg, args, notice, fetch, Discord, AyameClient, Db, EmbedTemplate);
+      AyameMessage(msg);
+    } else if(command === 'thanosquote') {
+      ThanosQuoteCommand(msg, args, notice, Discord, AyameClient, Db, EmbedTemplate);
       AyameMessage(msg);
     }
   })
