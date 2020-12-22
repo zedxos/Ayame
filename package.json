@@ -24,6 +24,7 @@
     "superagent": "^6.1.0",
     "twemoji-parser": "^13.0.0",
     "weather-js": "^2.0.0",
-    "project-uptimer": "^1.3.0"
+    "project-uptimer": "^1.3.0",
+    "eco.easy": "^0.1.2"
   }
 }
