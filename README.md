@@ -20,8 +20,11 @@
  
  [Support Server](https://discord.gg/DgztTA6SVN)
  
+# Credits 
+* Some of the commands are from [Miyako bot)(https://github.com/ravener/miyako/blob/master/src/utils/responses.js) by @[ravener](https://github.com/ravener)
+
 # Errors
-#### If you get (.....) is not a Function or Not a Constructor Make sure to check these
+#### If you get (.....) is not a Function or Not a Constructor Make sure to check these!
 ```js
 function ExampleCommand(/*The things youve define MAKE SURE IT HAS THE RIGHT PLACE OR ELSE IT WILL THROW THE CONFUSING ERRORS.*/) {
 
