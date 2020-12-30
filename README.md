@@ -1,7 +1,7 @@
 <img width="160" height="160" align="left" style="float: left; margin: 0 10px 10px 0;" alt="Ayame" src="https://i.ibb.co/G0S0xrv/9-C7-C8937-9541-4179-A735-DE7-C9-E84-B84-A.png">
 
 # Quick notice Dec. 30 2020
-- this bot is discontinued due to lack of coding knowledge and motivation you can invite my other Anime improved bot [here](https://discord.com/api/oauth2/authorize?client_id=755629231987490896&permissions=8&scope=bot)
+- this bot is discontinued due to lack of coding knowledge and motivation you can invite my other Anime improved bot [here](https://discord.com/api/oauth2/authorize?client_id=755629231987490896&permissions=8&scope=bot) its source code will be posted right away after getting accepted in top.gg C:
 
 # Ayame Discord Anime Bot!
  
